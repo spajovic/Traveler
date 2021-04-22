@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+//promenljive
+$primarna-boja:#ffe873;
+$dugme-boja:black;
+$dugme-boja2:white;
+
+
+
+*{
+    padding:0px;
+    margin:0px;
+}
+.sakriveno{
+    overflow: hidden;
+}
+body{
+    height: 100%;
+    font-family: 'Montserrat';
+    //display:none;
+}
+header {
+    position: absolute;
+    padding: 18px;
+    z-index:20;
+    display: flex;
+    justify-content: space-between;
+    width:calc(100% - 36px);
+    background: #f5f5f5;
+
+        a{
+            text-decoration: none;
+            color:black;
+
+        }
+        a:hover{
+            color:#F71735;
+        }
+        a.logo{
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+
+        }
+
+        nav ul {
+            list-style: none;
+            display:flex;
+            justify-content: space-around;
+            width:100%;
+            margin:0px;
+            padding:0px;
+
+            li a{
+                padding:18px;
+                font-size: 1rem;
+
+            }
+
+        }
+}
+// Pocetna stranica 
+#sadrzi-sve{
+    display:grid;
+    grid-template-columns: auto;
+
+    section{
+        padding: 20px 54px 15px 54px;
+
+
+
+        h1,h2,.dugmence{
+            text-transform: uppercase;
+            margin:0px;
+            font-family: "Lato", Arial, sans-serif;
+            font-weight: 300;
+        }
+        h2{
+            font-size:1.4rem;
+            z-index: 22;
+        }
+        .dugmence{
+            text-decoration:none;
+            color:black;
+            font-weight:bold;
+            padding-left:18px;
+            background-color: whitesmoke;
+        }
+        .dugmence:hover{
+            background-color: rgba(247, 24, 53,0.3);
+        }
+        .primarno{
+            padding:27px 27px 27px calc(54px + 25px);
+            background-position:54px;
+            border: 1px solid rgb(163, 163, 163);
+            display:inline-block;
+            margin-top:54px;
+            margin-left:-54px;
+            background: url('../img/strela.svg');
+            background-repeat: no-repeat;
+            background-position: 10px 27px;
+            background-size: 22px;
+            background-color: whitesmoke;
+           
+
+        }
+        .clipper{
+            overflow: hidden;
+        }
+
+    }
+    section.hero{
+        padding-top:145px;
+        background: url('../img/lpage.gif');
+        background-size:cover;
+
+        p{
+            width:70%;
+            font-size: 1.2rem;
+            margin-bottom: 0px;
+        }
+        h1{
+            font-size:3rem;
+        }
+
+
+    }
+    section.sidebar,section.subscribe{
+        font-size:0.9rem;
+        line-height: 29px;
+
+    }
+    section.sidebar{
+        background: $primarna-boja;
+
+        .dugmence{
+            margin-top:36px;
+            display:block;
+            background-position: 0px 4px;
+        }
+    }
+    section.subscribe{
+        background-color: whitesmoke;
+        input{
+            width:calc(100% - 40px);
+            padding: 18px;
+            font-family: 'Montserrat';
+            margin-bottom: 18px;
+        }
+        #dugme-mail{
+            width:100%;
+            background: $dugme-boja;
+            color:$dugme-boja2;
+            padding:18px;
+            border:none;
+            font-family:'Montserrat';
+            cursor:pointer;
+        }
+        #dugme-mail:hover{
+            color:#F71735;
+        }
+
+    }
+    .anim-panel{
+        p{
+            padding-top: 16px;
+        }
+    }
+}
+    // Javascript klase
+    .zeleni-border{
+        border:2px solid rgb(11, 136, 11);
+    }
+    .crveni-border{
+        border:2px solid red;
+    }
+    .boldovano{
+        font-weight: bold;
+    }
+    #poseban:hover{
+            background-color:rgba(255, 224, 66,0.7);
+        
+    }
+    .zuto{
+        color:#fdda27;
+    }
+    /* Image style */
+    #scrollUp {
+    background-image: url("../img/top.png");
+    bottom: 20px;
+    right: 20px;
+    width: 38px;    /* Width of image */
+    height: 38px;   /* Height of image */
+}
+
+
+.slike{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    height:550px;
+    background-color: white;
+        #slajder-drzac{
+            width:100%;
+            height:570px;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+                #levo-slajder{
+                    width:45%;
+                    background-color: white;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                        h2{
+                            text-align: center;
+                            font-family: "Lato", Arial, sans-serif;
+                            font-weight: 300;
+                            font-size: 1.8rem;
+                            padding-bottom: 26px;
+                            padding-top: 10px;
+                        }
+                        p{
+                            font-size: 1rem;
+                            font-family: 'Montserrat';
+                            color:black;
+                            width:85%;
+                            margin: 0px auto;
+                            text-align: center;
+                            line-height: 30px;
+                            
+                        }
+                }
+                #slajder{
+                    width:55%;
+                    height:100%;
+                    overflow: hidden;
+                    background-color:white;
+                        img{
+                            width:100%;
+                            height: 100%;
+                        }
+                        .slika2, .slika3, .slika4{
+                            display: none;
+                        }
+                }
+
+        }
+        
+
+    }
+    //Sat i forma
+    .sat-forma{ 
+        width: 100%;
+        height: 450px;
+        display: flex;
+        flex-wrap: wrap;
+            #sat-tekst{
+                width:45%;
+                background-color: $primarna-boja;
+                height: 100%;
+                display: flex;
+                align-items:center;
+
+                #sat p{
+                    margin:0px auto;
+                }
+                #sat .satina{
+                    font-size: 2.7rem;
+                    border: 2px solid black;
+                    width:60%;
+                    padding: 5px;
+                    font-weight: 300;
+                    text-align: center;
+                    margin-bottom: 35px;
+                    background-color: whitesmoke;
+
+                }
+                #sat .tekstIspodSata{
+                    width:80%;
+                    text-align: center;
+                    background-color: whitesmoke;
+                    font-size: 1.7rem;
+                    line-height: 34px;  
+                    padding: 5px;
+                    letter-spacing: 1px;
+                }
+
+                }
+                //Forma
+            #forma{
+                width:55%;
+                height: 100%;
+                background-color: whitesmoke;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                    form{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 80%;
+                            select{
+                                width:71%;
+                                padding:18px;
+                                font-family: 'Montserrat'
+                            }
+                            input{
+                                width:65%;
+                                padding: 18px;
+                                font-family: 'Montserrat';
+                            }
+                            #boksina{
+                                width:65%;
+                                height:30px;
+                                padding-top: 10px;
+                                text-align: center;
+                                    #boks{
+                                        width:10%;
+                                    }
+                            }
+                            
+                            label{
+                                font-family: 'Montserrat';
+                                font-weight: 300;
+                                line-height: 29px;
+                                padding-top: 10px;
+                                padding-bottom: 6px;
+                                font-size: 1.1rem;
+                            }
+                            #dugmence2{
+                                padding:10px;
+                                color:white;
+                                background-color: black;
+                                border: none;
+                                width:30%;
+                                margin-top: 15px;
+                                cursor:pointer;
+                            }
+                            #dugmence2:hover{
+                                color: #F71735;
+                            }
+                    }
+            }    
+    }
+    // Sekcija pitanja
+    .pitanja{
+        width:100%;
+        height:auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 100px;
+            #pitanja-tekst{
+                width:60%;
+                h1{
+                    font-family: "Lato", Arial, sans-serif;
+                    font-weight: 100;
+                    font-size: 40px;
+                    line-height: 1.5;
+                    text-align: center;
+                    margin-top: 120px;
+                }
+                #dugmejos{
+                    padding: 5px;
+                    width:20%;
+                    color:white;
+                    font-family: 'Montserrat';
+                    background-color: black;
+                    border: none;
+                    margin-top: 20px;
+                    cursor:pointer;
+                }
+                #dugmejos:hover{
+                    color: #F71735;
+                }
+                h2{
+                    font-size: 20px;
+                    text-align: center;
+                    color: gray;
+                    font-weight: normal;
+                    line-height: 1.5;
+                }
+                h3{
+                    padding-top: 40px;
+                    font-weight: normal;
+
+                }
+                #dodatak{
+                    display: none;
+                }
+                p{
+                    padding-top: 10px;
+
+                }
+            }
+
+    }
+    //footer 
+    footer{
+        width:100%;
+        height:100px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: whitesmoke; 
+        box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.2);
+            #autor{
+                width:50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                p{
+                    font-size: 16px;
+                }
+                //Modal
+                    #modalBtn{
+                        width:20%;
+                        padding:8px;
+                        font-family: 'Montserrat';
+                        border: none;
+                        color:black;
+                        background-color: $primarna-boja;
+                        margin-bottom: 4px;
+                        cursor: pointer;
+                    }
+                    #modalBtn:hover{
+                        color: #F71735;
+                    }
+                    .modal{
+                        display: none;
+                        position:fixed;
+                        z-index: 1;
+                        left:0;
+                        top:0;
+                        height:100%;
+                        width:100%;
+                        overflow: auto;
+                        background-color: rgba(0,0,0,0.4);
+                            .modal-content{
+                                background-color:#f4f4f4;
+                                margin:5% auto;
+                                padding:20px;
+                                width:70%;
+                                box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+                                animation-name:modalopen;
+                                animation-duration: 1.5s;
+                                    a{
+                                        color: #F71735;
+                                        text-decoration: none;
+                                    }
+                                    #slika-autor{
+                                        width:40%;
+                                        height:40%;
+                                        margin: 0px auto;
+                                        padding-top: 20px;
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+                                    }
+                                    #closeBtn{
+                                        float:right;
+                                        color:#ccc;
+                                        font-size: 30px;
+                                    }
+                                    #closeBtn:hover,#closeBtn:focus{
+                                        color:black;
+                                        text-decoration: none;
+                                        cursor:pointer;
+                                    }
+                            }
+                            @keyframes modalopen {
+                                from{opacity:0}
+                                top{opacity:1}
+                            }
+                    }
+            }
+            #linkovi{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                h2{
+                    font-weight: normal;
+                    font-size: 18px;
+                    padding-top: 20px;
+                    padding-bottom: 5px;
+                }
+                #dokumentacija{
+                    display: flex;
+                    width:100%;
+                    justify-content: space-between;
+                    padding-top: 4px;
+                    a{
+                        text-decoration: none;
+                        color:black;
+                        font-size: 1.5rem;
+                        padding-left: 1px;
+                    }
+                    a:hover{
+                        color: #F71735;
+                        
+                    }
+                }
+            }
+    }  
+
+
+
+
+
+// Media query
+@media only screen and (min-width: 768px){
+    html {
+        font-size:18px;
+    }
+}
+@media only screen and (min-width: 1020px){
+    header{
+        background:none;
+    }
+
+    #sadrzi-sve{
+        grid-template-columns: 70% auto;
+        grid-template-rows:60% auto;
+        grid-template-areas:
+            "hero featured"
+            "hero subscribe";
+        height:100vh; 
+    }
+    section.hero{
+        grid-area:hero;
+    }
+    section{
+        display:grid;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+    #sadrzi-sve .anim-panel p{
+        font-size: 0.9rem;
+        line-height: 29px;
+    }
+}
+@media only screen and (max-width: 1170px) {
+    #sadrzi-sve .anim-panel p{
+        font-size: 0.8rem;
+        line-height: 24px;
+    }
+    .sat-forma #sat-tekst #sat .satina{
+        font-size: 2.1rem;
+    }
+    .sat-forma #sat-tekst #sat .tekstIspodSata{
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (max-width: 1071px){
+    #sadrzi-sve section.sidebar .dugmence{
+        margin-top: 15px;
+    }
+    #sadrzi-sve section h2{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 1034px) {
+    .pitanja{
+        align-items: center;
+    }
+    .slike{
+        flex-wrap: wrap;
+        height:auto;
+    }
+    .slike #slajder-drzac{
+        height:auto;
+    }
+    .slike #slajder-drzac #levo-slajder{
+        width:100%;
+        padding-top: 0px;
+        padding-bottom:80px;
+    }
+    .slike #slajder-drzac #slajder{
+        width:100%;
+        height:500px;
+    }
+    .sat-forma #sat-tekst #sat .tekstIspodSata{
+        font-size: 1.7rem;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .sat-forma{
+        height:auto;
+    }
+    .sat-forma #sat-tekst{
+        width:100%;
+        padding-bottom: 40px;
+        padding-top: 20px;
+    }
+    .sat-forma #sat-tekst #sat .satina{
+        font-size: 2.4rem;
+    }
+    .sat-forma #forma{
+        width:100%;
+        height:auto;
+    }
+    .pitanja #pitanja-tekst h1{
+        font-size: 33px;
+        margin-top: 90px;
+    }
+    .pitanja #pitanja-tekst h2{
+        font-size: 18px;
+    }
+    footer #autor #modalBtn{
+        width:24%;
+    }
+    #sadrzi-sve .anim-panel p{
+        font-size: 1rem;
+        padding-bottom: 6px;
+    }
+    .sat-forma #forma{
+        padding-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    footer #autor #modalBtn{
+        width:30%;
+    }
+    .pitanja #pitanja-tekst #dugmejos{
+        width:35%;
+    }
+    footer #linkovi h2{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 580px) {
+    footer #autor #modalBtn{
+        width:40%;
+    }
+    #sadrzi-sve section .primarno{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-position: 3px 20px;
+    }
+    footer{
+        height: auto;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    footer #autor{
+        width:100%;
+    }
+    footer #linkovi{
+        width:100%;
+    }
+    .sat-forma #sat-tekst #sat .tekstIspodSata{
+        font-size: 1.3rem;
+    }
+    .slike #slajder-drzac #slajder{
+        height:380px;
+    }
+}
+@media only screen and (max-width: 450px){
+    header{
+        display: none;
+    }
+    .sat-forma #forma form #chbxlabela{
+        font-size: 0.9rem;
+    }
+    .slike #slajder-drzac #slajder{
+        height: 310px;
+    }
+}
+@media only screen and (max-width: 420px){
+    .sat-forma #sat-tekst #sat .satina{
+        font-size: 1.9rem;
+    }
+    .pitanja #pitanja-tekst h2{
+        font-size: 16px;
+    }
+    footer #linkovi h2{
+        display: none;
+    }
+    footer #linkovi #dokumentacija{
+        width:230px;
+        display: flex;
+        justify-content: space-around;
+    }
+    footer #linkovi #dokumentacija a{
+        padding-top: 16px;
+    }
+    .pitanja #pitanja-tekst #dugmejos{
+        width:46%;
+    }
+}
+@media only screen and (max-width:360px){
+    #sadrzi-sve section{
+        padding:25px;
+    }
+    .slike #slajder-drzac #slajder{
+        height:240px;
+    }
+    .sat-forma #sat-tekst #sat .satina{
+        font-size: 1.7rem;
+    }
+    .pitanja #pitanja-tekst h1{
+        font-size: 25px;
+    }
+    .pitanja #pitanja-tekst h2{
+        font-size: 14px;
+    }
+    .pitanja #pitanja-tekst h3{
+        padding-top:25px;
+    }
+    .sat-forma #forma form #chbxlabela{
+        font-size: 0.7rem;
+    }
+}
+
+
+
+
+
